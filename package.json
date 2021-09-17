@@ -33,6 +33,7 @@
     "webpack-merge": "^4.2.2"
   },
   "dependencies": {
+    "copy-webpack-plugin": "6",
     "phaser": "^3.50.0"
   }
 }

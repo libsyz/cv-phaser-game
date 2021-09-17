@@ -1,6 +1,5 @@
 import Phaser from 'phaser';
-import logoImg from './assets/logo.png';
-import { LoadingScene } from './scenes/loading/index.js';
+import { LoadingScene } from './scenes/loading/loading.js';
 
 
 window.sizeChanged = () => {
@@ -16,17 +15,14 @@ window.sizeChanged = () => {
   }
 };
 
-window.onresize = () => window.sizeChanged();
+// window.onresize = () => window.sizeChanged();
 
 const config = {
     title: 'Miguel\'s pirate CV Game',
     type: Phaser.WEBGL,
     backgroundColor: '#351f1b',
-    scale: {
-      mode: Phaser.Scale.ScaleModes.NONE,
-      width: window.innerWidth,
-      height: window.innerHeight,
-    },
+    height: 600,
+    width: 800,
     physics: {
       default: 'arcade',
       arcade: {
@@ -37,12 +33,6 @@ const config = {
       antialiasGL: false,
       pixelArt: true,
     },
-    callbacks: {
-      postBoot: () => {
-        window.sizeChanged();
-      },
-    },
-    canvasStyle: `display: block; width: 100%; height: 100%;`,
     autoFocus: true,
     audio: {
       disableWebAudio: false,
