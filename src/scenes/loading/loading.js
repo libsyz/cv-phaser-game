@@ -1,4 +1,5 @@
 import { Scene } from 'phaser';
+import { Player } from '../../classes/player.js';
 
 export class LoadingScene extends Scene {
   constructor() {
@@ -19,10 +20,15 @@ export class LoadingScene extends Scene {
   create() {
     console.log('Loading scene was created');
     this.bg = this.add.image(400, 300, 'bg');
-    this.pirate = this.add.sprite(200, 200, 'pirate')
+    // this.pirate = this.add.sprite(200, 200, 'pirate')
+    this.player = new Player(this, 100, 100);
 
-    this.pirate.setScale(2);
+    this.player.setScale(2);
     this.bg.setDisplaySize(800, 600);
 
+  }
+
+  update() {
+    this.player.update();
   }
 }

@@ -2,7 +2,10 @@
 
 ## To-dos Game
 
-[] - Set up Phaser
-[] - Load Assets
-[] - Have a Scene with a background
-[] - Render A Character
+[X] - Set up Phaser
+[X] - Load Assets
+[X] - Have a Scene with a background
+[X] - Render A Character
+
+[ ] - Move the Pirate left and right
+[ ] - Add Animations to the Pirate
