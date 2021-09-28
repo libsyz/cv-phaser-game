@@ -7,5 +7,5 @@
 [X] - Have a Scene with a background
 [X] - Render A Character
 
-[ ] - Move the Pirate left and right
+[X] - Move the Pirate left and right
 [ ] - Add Animations to the Pirate
