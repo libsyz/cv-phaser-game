@@ -14,11 +14,12 @@ export class LoadingScene extends Scene {
     // path from baseURL to file: 'sprites/king.png'
 
 	  this.load.image('pirate', 'treasure-hunters/idle-01.png');
+    this.load.atlas('a-pirate', 'treasure-hunters/captain-clown-nose/captain_atlas.png' ,'treasure-hunters/captain-clown-nose/captain_atlas.json');
     this.load.image('bg', 'treasure-hunters/palm-tree-island/Sprites/Background/BG Image.png');
   }
 
   create() {
-    console.log('Loading scene was created');
+
     this.bg = this.add.image(400, 300, 'bg');
     // this.pirate = this.add.sprite(200, 200, 'pirate')
     this.player = new Player(this, 100, 100);

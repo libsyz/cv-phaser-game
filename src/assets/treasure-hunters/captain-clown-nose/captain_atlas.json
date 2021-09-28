@@ -1018,7 +1018,7 @@
 					}
 				},
 				{
-					"filename": "sprites/captain-clown-nose/captain-clown-nose-no-sword/02-Run/Run 02.png",
+					"filename": "run-2",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -1039,7 +1039,7 @@
 					}
 				},
 				{
-					"filename": "sprites/captain-clown-nose/captain-clown-nose-no-sword/02-Run/Run 05.png",
+					"filename": "run-5",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -1186,7 +1186,7 @@
 					}
 				},
 				{
-					"filename": "sprites/captain-clown-nose/captain-clown-nose-no-sword/02-Run/Run 04.png",
+					"filename": "run-4",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -1228,7 +1228,7 @@
 					}
 				},
 				{
-					"filename": "sprites/captain-clown-nose/captain-clown-nose-no-sword/02-Run/Run 01.png",
+					"filename": "run-1",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -1312,7 +1312,7 @@
 					}
 				},
 				{
-					"filename": "sprites/captain-clown-nose/captain-clown-nose-no-sword/02-Run/Run 03.png",
+					"filename": "run-3",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -1333,7 +1333,7 @@
 					}
 				},
 				{
-					"filename": "sprites/captain-clown-nose/captain-clown-nose-no-sword/02-Run/Run 06.png",
+					"filename": "run-6",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
