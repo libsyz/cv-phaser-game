@@ -18,20 +18,20 @@ export class Player extends Physics.Arcade.Sprite {
   update() {
     this.body.setVelocity(0);
 
-    if (this.keyW?.isDown) {
+    if (this.keyW.isDown) {
       this.body.velocity.y = -110;
     }
 
-    if (this.keyA?.isDown) {
+    if (this.keyA.isDown) {
       this.body.velocity.x = -110;
       this.body.setOffset(48, 15);
     }
 
-    if (this.keyS?.isDown) {
+    if (this.keyS.isDown) {
       this.body.velocity.y = 110;
     }
 
-    if (this.keyD?.isDown) {
+    if (this.keyD.isDown) {
       this.body.velocity.x = 110;
       this.body.setOffset(15, 15);
     }
