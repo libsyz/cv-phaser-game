@@ -13,6 +13,7 @@ export class Player extends Physics.Arcade.Sprite {
     scene.physics.add.existing(this);
 
     this.body.setCollideWorldBounds(true);
+    this.setBounce(6);
     this.body.setGravityY(10000);
     this.initAnimation()
     this.anims.play('idle');
