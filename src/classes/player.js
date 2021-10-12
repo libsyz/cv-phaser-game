@@ -13,7 +13,9 @@ export class Player extends Physics.Arcade.Sprite {
     scene.physics.add.existing(this);
 
     this.body.setCollideWorldBounds(true);
+    this.body.setGravityY(10000);
     this.initAnimation()
+    this.anims.play('idle');
   }
 
   update() {
@@ -27,35 +29,48 @@ export class Player extends Physics.Arcade.Sprite {
       this.body.velocity.x = -110;
       this.body.setOffset(48, 15);
       this.checkFlip();
-      if (!this.anims.isPlaying) {
-        this.anims.play('run', true);
-      }
+      this.anims.play('run', true);
+
     }
 
     if (this.keyS.isDown) {
       this.body.velocity.y = 110;
-
     }
 
     if (this.keyD.isDown) {
       this.body.velocity.x = 110;
       this.body.setOffset(15, 15);
       this.checkFlip();
-      if (!this.anims.isPlaying) {
-        this.anims.play('run', true);
-      }
+      this.anims.play('run', true);
+    }
+
+    if (!this.anims.isPlaying) {
+      this.anims.play('idle');
     }
   }
 
   initAnimation() {
-
-    this.scene.anims.create({
+    this.scene.anims.create(
+    {
       key: 'run',
       frames: this.scene.anims.generateFrameNames('a-pirate', {
         prefix: 'run-',
+        start: 1,
         end: 6
       }),
       frameRate: 7
+    })
+
+    this.scene.anims.create({
+      key: 'idle',
+      frames: this.scene.anims.generateFrameNames('a-pirate', {
+        prefix: 'idle-',
+        start: 1,
+        end: 4
+      }),
+      frameRate: 2,
+      yoyo: true,
+      repeat: -1
     })
   }
 

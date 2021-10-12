@@ -997,7 +997,7 @@
 					}
 				},
 				{
-					"filename": "sprites/captain-clown-nose/captain-clown-nose-no-sword/01-idle/Idle 05.png",
+					"filename": "idle-4",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -1207,7 +1207,7 @@
 					}
 				},
 				{
-					"filename": "sprites/captain-clown-nose/captain-clown-nose-no-sword/01-idle/Idle 02.png",
+					"filename": "idle-1",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -1291,7 +1291,7 @@
 					}
 				},
 				{
-					"filename": "sprites/captain-clown-nose/captain-clown-nose-no-sword/01-idle/Idle 04.png",
+					"filename": "idle-3",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -1396,7 +1396,7 @@
 					}
 				},
 				{
-					"filename": "sprites/captain-clown-nose/captain-clown-nose-no-sword/01-idle/Idle 03.png",
+					"filename": "idle-2",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
