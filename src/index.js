@@ -1,5 +1,6 @@
 import Phaser from 'phaser';
 import { LoadingScene } from './scenes/loading/loading.js';
+import { Welcome } from './scenes/welcome/welcome.js';
 
 
 window.sizeChanged = () => {
@@ -39,7 +40,7 @@ const config = {
       disableWebAudio: false,
     },
     parent: 'phaser-example',
-    scene: LoadingScene
+    scene: [Welcome, LoadingScene]
 };
 
 window.game = new Phaser.Game(config);

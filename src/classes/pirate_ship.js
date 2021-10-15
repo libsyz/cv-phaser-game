@@ -4,7 +4,7 @@ export class PirateShip extends Physics.Arcade.StaticGroup {
   constructor(world, scene) {
     super(world, scene);
     this.shipHull = this.create(100, 300, 'ship-hull').setScale(2);
-    this.flag = this.create(0,200, 'ship-flag');
+    this.flag = this.create(100,300, 'ship-flag');
     // super(scene, x, y, 'ship-hull');
     // scene.add.existing(this);
     // scene.physics.add.existing(this);
