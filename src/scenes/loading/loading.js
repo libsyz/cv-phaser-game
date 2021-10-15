@@ -18,24 +18,25 @@ export class LoadingScene extends Scene {
     this.load.atlas('a-pirate', 'treasure-hunters/captain-clown-nose/captain_atlas.png' ,'treasure-hunters/captain-clown-nose/captain_atlas.json');
     this.load.image('bg', 'treasure-hunters/palm-tree-island/Sprites/Background/BG Image.png');
     this.load.image('ship-hull', 'treasure-hunters/merchant-ship/Sprites/Ship/Ship/Idle/1.png');
+    this.load.image('ship-flag', 'treasure-hunters/merchant-ship/Sprites/Ship/Sail/Wind/1.png')
   }
 
   create() {
 
     this.bg = this.add.image(400, 300, 'bg');
 
-    // this.pirate = this.add.sprite(200, 200, 'pirate');
-    // dthis.merchantShipSprite = this.add.sprite(600, 600, 'ship-hull');
     this.player = new Player(this, 0, 0);
-    this.merchantShip = new PirateShip(this, 150, 400);
+    this.merchantShip = new PirateShip(this.physics.world, this);
     //fthis.merchantShip.setScale(3);
-    this.player.setScale(2);
+    // this.merchantShip.refresh();
+    // this.merchantShip.setScale(2);
     this.bg.setDisplaySize(800, 600);
 
-    this.physics.add.collider(this.player, this.merchantShip.group);
+    this.physics.add.collider(this.player, this.merchantShip);
   }
 
   update() {
     this.player.update();
+    this.physics.world.collide(this.player, this.merchantShip);
   }
 }
