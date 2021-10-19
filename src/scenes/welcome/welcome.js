@@ -3,9 +3,11 @@
 export class Welcome extends Phaser.Scene {
   constructor() {
     super('welcome');
+
   }
 
   preload() {
+    this.keyQ = this.input.keyboard.addKey('Q');
     this.load.baseURL = 'assets/';
     this.load.image('bg', 'treasure-hunters/palm-tree-island/Sprites/Background/BG Image.png');
   }
@@ -16,8 +18,14 @@ export class Welcome extends Phaser.Scene {
     this.bg.displayHeight = this.sys.canvas.height
 
     this.add.text(20, 20, "Welcome to Miguel's Pirate CV Game", this.textConfig());
-    this.add.text(20, 40, "Press space to continue", this.textConfig());
+    this.add.text(20, 40, "Press Q to continue", this.textConfig());
     this.add.text(20, 60, "Press D to download the CV Directly", this.textConfig());
+  }
+
+  update() {
+    if (this.keyQ.isDown) {
+      this.scene.start('loading-scene');
+    }
   }
 
   textConfig(color = '000') {

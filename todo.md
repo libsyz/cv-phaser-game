@@ -23,4 +23,16 @@
 
 -----------------------------------------
 
-[ ] - Create Basic Intro Scene
+[X] - Create Basic Intro Scene
+
+------------------------------------------
+
+[X] - Render a tile map on the loading scene, even if it's crap
+[X] - Create Concept for Intro Game
+
+-----------------------------------------------
+
+[ ] - Add Layer for grass and palm trees on intro scene 
+
+[ ] - Add UI Layer for intro screen
+ [ ] - Add all assets necessary
