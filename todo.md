@@ -32,7 +32,15 @@
 
 -----------------------------------------------
 
-[ ] - Add Layer for grass and palm trees on intro scene 
+[X] - Add Layer for grass and palm trees on intro scene
 
-[ ] - Add UI Layer for intro screen
- [ ] - Add all assets necessary
+[X] - Add UI Layer for intro screen
+ [X] - Add all assets necessary
+
+---------------------------------------------------
+
+[ ] - Render new tilemap intro scene
+[ ] - Make sure background is placed in the back
+[ ] - Optional: How can I get the objects in the scene?
+
+----------------------------------------------------

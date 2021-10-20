@@ -10,16 +10,20 @@ export class Welcome extends Phaser.Scene {
     this.keyQ = this.input.keyboard.addKey('Q');
     this.load.baseURL = 'assets/';
     this.load.image('bg', 'treasure-hunters/palm-tree-island/Sprites/Background/BG Image.png');
+    this.load.image('ground-tiles', 'treasure-hunters/palm-tree-island/Sprites/Terrain/Terrain(32x32).png');
+
+    this.tilemap = this.load.tilemapTiledJSON('welcome', 'treasure-hunters/welcome.json');
+    // this.palmTreesTileSet =
   }
 
   create() {
+    this.tilemap = this.make.tilemap({ key: 'welcome'});
+    this.tileset = this.tilemap.addTilesetImage('terrain', 'ground-tiles');
     this.bg = this.add.image(this.cameras.main.width / 2, this.cameras.main.height / 2, 'bg')
     this.bg.displayWidth = this.sys.canvas.width
     this.bg.displayHeight = this.sys.canvas.height
+    this.backgroundLayer = this.tilemap.createLayer('ground', this.tileset, 0, -30 );
 
-    this.add.text(20, 20, "Welcome to Miguel's Pirate CV Game", this.textConfig());
-    this.add.text(20, 40, "Press Q to continue", this.textConfig());
-    this.add.text(20, 60, "Press D to download the CV Directly", this.textConfig());
   }
 
   update() {
