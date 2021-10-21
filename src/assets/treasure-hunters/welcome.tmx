@@ -1,182 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="27" height="20" tilewidth="32" tileheight="32" infinite="0" nextlayerid="15" nextobjectid="45">
- <tileset firstgid="1" source="UI.tsx"/>
- <tileset firstgid="88" name="terrain" tilewidth="32" tileheight="32" tilecount="85" columns="17">
+<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="27" height="20" tilewidth="32" tileheight="32" infinite="0" nextlayerid="18" nextobjectid="45">
+ <tileset firstgid="1" name="terrain" tilewidth="32" tileheight="32" tilecount="85" columns="17">
   <image source="palm-tree-island/Sprites/Terrain/Terrain(32x32).png" width="544" height="160"/>
  </tileset>
- <tileset firstgid="173" source="Terrain (32x32).tsx"/>
- <tileset firstgid="173" name="palm-trees" tilewidth="170" tileheight="96" tilecount="31" columns="0">
-  <grid orientation="orthogonal" width="1" height="1"/>
-  <tile id="0">
-   <image width="39" height="32" source="palm-tree-island/Sprites/Front Palm Trees/Front Palm Tree Top 04.png"/>
-  </tile>
-  <tile id="1">
-   <image width="39" height="32" source="palm-tree-island/Sprites/Front Palm Trees/Front Palm Tree Top 03.png"/>
-  </tile>
-  <tile id="2">
-   <image width="39" height="32" source="palm-tree-island/Sprites/Front Palm Trees/Front Palm Tree Top 02.png"/>
-  </tile>
-  <tile id="3">
-   <image width="39" height="32" source="palm-tree-island/Sprites/Front Palm Trees/Front Palm Tree Top 01.png"/>
-  </tile>
-  <tile id="4">
-   <image width="96" height="96" source="palm-tree-island/Sprites/Front Palm Trees/Front Palm Bottom and Grass (32x32).png"/>
-  </tile>
-  <tile id="5">
-   <image width="64" height="64" source="palm-tree-island/Sprites/Back Palm Trees/Back Palm Tree Regular 01.png"/>
-  </tile>
-  <tile id="6">
-   <image width="64" height="64" source="palm-tree-island/Sprites/Back Palm Trees/Back Palm Tree Regular 02.png"/>
-  </tile>
-  <tile id="7">
-   <image width="64" height="64" source="palm-tree-island/Sprites/Back Palm Trees/Back Palm Tree Regular 03.png"/>
-  </tile>
-  <tile id="8">
-   <image width="64" height="64" source="palm-tree-island/Sprites/Back Palm Trees/Back Palm Tree Regular 04.png"/>
-  </tile>
-  <tile id="9">
-   <image width="51" height="53" source="palm-tree-island/Sprites/Back Palm Trees/Back Palm Tree Left 01.png"/>
-  </tile>
-  <tile id="10">
-   <image width="51" height="53" source="palm-tree-island/Sprites/Back Palm Trees/Back Palm Tree Left 02.png"/>
-  </tile>
-  <tile id="11">
-   <image width="51" height="53" source="palm-tree-island/Sprites/Back Palm Trees/Back Palm Tree Left 03.png"/>
-  </tile>
-  <tile id="12">
-   <image width="51" height="53" source="palm-tree-island/Sprites/Back Palm Trees/Back Palm Tree Left 04.png"/>
-  </tile>
-  <tile id="13">
-   <image width="52" height="53" source="palm-tree-island/Sprites/Back Palm Trees/Back Palm Tree Right 01.png"/>
-  </tile>
-  <tile id="14">
-   <image width="52" height="53" source="palm-tree-island/Sprites/Back Palm Trees/Back Palm Tree Right 02.png"/>
-  </tile>
-  <tile id="15">
-   <image width="52" height="53" source="palm-tree-island/Sprites/Back Palm Trees/Back Palm Tree Right 03.png"/>
-  </tile>
-  <tile id="16">
-   <image width="52" height="53" source="palm-tree-island/Sprites/Back Palm Trees/Back Palm Tree Right 04.png"/>
-  </tile>
-  <tile id="17">
-   <image width="35" height="3" source="palm-tree-island/Sprites/Background/Water Reflect Small 01.png"/>
-  </tile>
-  <tile id="18">
-   <image width="35" height="3" source="palm-tree-island/Sprites/Background/Water Reflect Small 02.png"/>
-  </tile>
-  <tile id="19">
-   <image width="35" height="3" source="palm-tree-island/Sprites/Background/Water Reflect Small 03.png"/>
-  </tile>
-  <tile id="20">
-   <image width="35" height="3" source="palm-tree-island/Sprites/Background/Water Reflect Small 04.png"/>
-  </tile>
-  <tile id="21">
-   <image width="53" height="3" source="palm-tree-island/Sprites/Background/Water Reflect Medium 01.png"/>
-  </tile>
-  <tile id="22">
-   <image width="53" height="3" source="palm-tree-island/Sprites/Background/Water Reflect Medium 02.png"/>
-  </tile>
-  <tile id="23">
-   <image width="53" height="3" source="palm-tree-island/Sprites/Background/Water Reflect Medium 03.png"/>
-  </tile>
-  <tile id="24">
-   <image width="53" height="3" source="palm-tree-island/Sprites/Background/Water Reflect Medium 04.png"/>
-  </tile>
-  <tile id="25">
-   <image width="170" height="10" source="palm-tree-island/Sprites/Background/Water Reflect Big 01.png"/>
-  </tile>
-  <tile id="26">
-   <image width="170" height="10" source="palm-tree-island/Sprites/Background/Water Reflect Big 02.png"/>
-  </tile>
-  <tile id="27">
-   <image width="170" height="10" source="palm-tree-island/Sprites/Background/Water Reflect Big 03.png"/>
-  </tile>
-  <tile id="28">
-   <image width="170" height="10" source="palm-tree-island/Sprites/Background/Water Reflect Big 04.png"/>
-  </tile>
-  <tile id="29">
-   <image width="32" height="32" source="palm-tree-island/Sprites/Background/Additional Sky.png"/>
-  </tile>
-  <tile id="30">
-   <image width="32" height="32" source="palm-tree-island/Sprites/Background/Additional Water.png"/>
-  </tile>
+ <tileset firstgid="86" name="Back Palm Tree Regular 01" tilewidth="32" tileheight="32" tilecount="4" columns="2">
+  <image source="palm-tree-island/Sprites/Back Palm Trees/Back Palm Tree Regular 01.png" width="64" height="64"/>
  </tileset>
- <tileset firstgid="204" name="Front Palm Bottom and Grass (32x32)" tilewidth="32" tileheight="32" tilecount="9" columns="3">
-  <image source="palm-tree-island/Sprites/Front Palm Trees/Front Palm Bottom and Grass (32x32).png" width="96" height="96"/>
+ <tileset firstgid="90" name="wood_board" tilewidth="32" tileheight="32" tilecount="16" columns="4">
+  <image source="../wood_board.png" width="128" height="128"/>
  </tileset>
- <tileset firstgid="213" name="tree_fronts" tilewidth="448" tileheight="101" tilecount="5" columns="0">
-  <grid orientation="orthogonal" width="1" height="1"/>
-  <tile id="0">
-   <image width="39" height="32" source="palm-tree-island/Sprites/Front Palm Trees/Front Palm Tree Top 01.png"/>
-  </tile>
-  <tile id="1">
-   <image width="74" height="24" source="palm-tree-island/Sprites/Background/Small Cloud 1.png"/>
-  </tile>
-  <tile id="2">
-   <image width="133" height="35" source="palm-tree-island/Sprites/Background/Small Cloud 2.png"/>
-  </tile>
-  <tile id="3">
-   <image width="140" height="39" source="palm-tree-island/Sprites/Background/Small Cloud 3.png"/>
-  </tile>
-  <tile id="4">
-   <image width="448" height="101" source="palm-tree-island/Sprites/Background/Big Clouds.png"/>
-  </tile>
- </tileset>
- <tileset firstgid="218" name="paper_UI" tilewidth="131" tileheight="129" tilecount="17" columns="0">
-  <grid orientation="orthogonal" width="1" height="1"/>
-  <tile id="0">
-   <image width="131" height="129" source="wood-and-paper-ui/Sprites/Green Board/Green Board (guide).png"/>
-  </tile>
-  <tile id="1">
-   <image width="32" height="32" source="wood-and-paper-ui/Sprites/Green Board/1.png"/>
-  </tile>
-  <tile id="2">
-   <image width="32" height="32" source="wood-and-paper-ui/Sprites/Green Board/2.png"/>
-  </tile>
-  <tile id="3">
-   <image width="32" height="32" source="wood-and-paper-ui/Sprites/Green Board/3.png"/>
-  </tile>
-  <tile id="4">
-   <image width="32" height="32" source="wood-and-paper-ui/Sprites/Green Board/4.png"/>
-  </tile>
-  <tile id="5">
-   <image width="32" height="32" source="wood-and-paper-ui/Sprites/Green Board/5.png"/>
-  </tile>
-  <tile id="6">
-   <image width="32" height="32" source="wood-and-paper-ui/Sprites/Green Board/6.png"/>
-  </tile>
-  <tile id="7">
-   <image width="32" height="32" source="wood-and-paper-ui/Sprites/Green Board/7.png"/>
-  </tile>
-  <tile id="8">
-   <image width="32" height="32" source="wood-and-paper-ui/Sprites/Green Board/8.png"/>
-  </tile>
-  <tile id="9">
-   <image width="32" height="32" source="wood-and-paper-ui/Sprites/Green Board/9.png"/>
-  </tile>
-  <tile id="10">
-   <image width="32" height="32" source="wood-and-paper-ui/Sprites/Green Board/10.png"/>
-  </tile>
-  <tile id="11">
-   <image width="32" height="32" source="wood-and-paper-ui/Sprites/Green Board/11.png"/>
-  </tile>
-  <tile id="12">
-   <image width="32" height="32" source="wood-and-paper-ui/Sprites/Green Board/12.png"/>
-  </tile>
-  <tile id="13">
-   <image width="32" height="32" source="wood-and-paper-ui/Sprites/Green Board/13.png"/>
-  </tile>
-  <tile id="14">
-   <image width="32" height="32" source="wood-and-paper-ui/Sprites/Green Board/14.png"/>
-  </tile>
-  <tile id="15">
-   <image width="32" height="32" source="wood-and-paper-ui/Sprites/Green Board/15.png"/>
-  </tile>
-  <tile id="16">
-   <image width="32" height="32" source="wood-and-paper-ui/Sprites/Green Board/16.png"/>
-  </tile>
- </tileset>
- <layer id="13" name="palm_trees_bg" width="27" height="20">
+ <layer id="17" name="green_board" width="27" height="20">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -184,74 +17,14 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,90,98,98,98,98,98,98,98,98,98,98,98,98,99,0,0,0,0,0,0,
+0,0,0,0,0,0,0,100,101,101,101,101,101,101,101,101,101,101,101,101,102,0,0,0,0,0,0,
+0,0,0,0,0,0,0,100,101,101,101,101,101,101,101,101,101,101,101,101,102,0,0,0,0,0,0,
+0,0,0,0,0,0,0,100,101,101,101,101,101,101,101,101,101,101,101,101,102,0,0,0,0,0,0,
+0,0,0,0,0,0,0,100,101,101,101,101,101,101,101,101,101,101,101,101,102,0,0,0,0,0,0,
+0,0,0,0,0,0,0,100,101,101,101,101,101,101,101,101,101,101,101,101,102,0,0,0,0,0,0,
+0,0,0,0,0,0,0,103,104,104,104,104,104,104,104,104,104,104,104,104,105,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-180,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,180,0,0,0,
-0,0,0,0,0,0,0,180,0,0,0,0,0,0,0,0,180,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-</data>
- </layer>
- <layer id="6" name="ground" width="27" height="20">
-  <data encoding="csv">
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-211,211,0,212,0,0,0,0,212,0,211,0,0,211,211,211,0,0,0,211,0,0,212,212,212,212,212,
-88,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,90,
-122,123,123,123,123,123,123,123,106,123,106,123,106,123,123,123,123,123,106,123,123,123,123,106,123,123,124
-</data>
- </layer>
- <objectgroup id="14" name="clouds">
-  <object id="35" gid="214" x="32" y="160" width="74" height="24"/>
-  <object id="36" gid="214" x="352" y="192" width="74" height="24"/>
-  <object id="37" gid="214" x="736" y="128" width="74" height="24"/>
-  <object id="38" gid="214" x="800" y="192" width="74" height="24"/>
-  <object id="39" gid="216" x="0" y="320" width="140" height="39"/>
-  <object id="40" gid="216" x="192" y="288" width="140" height="39"/>
-  <object id="41" gid="216" x="416" y="352" width="140" height="39"/>
-  <object id="42" gid="216" x="640" y="288" width="140" height="39"/>
-  <object id="43" gid="217" x="0" y="512" width="448" height="101"/>
-  <object id="44" gid="217" x="448" y="512" width="448" height="101"/>
- </objectgroup>
- <layer id="11" name="UI_menu_backdrop" width="27" height="20">
-  <data encoding="csv">
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,219,220,220,220,220,220,220,220,220,220,220,220,220,220,220,221,0,0,0,0,
-0,0,0,0,0,0,0,222,223,223,223,223,223,223,223,223,223,223,223,223,223,223,224,0,0,0,0,
-0,0,0,0,0,0,0,222,223,223,223,223,223,223,223,223,223,223,223,223,223,223,224,0,0,0,0,
-0,0,0,0,0,0,0,222,223,223,223,223,223,223,223,223,223,223,223,223,223,223,224,0,0,0,0,
-0,0,0,0,0,0,0,222,223,223,223,223,223,223,223,223,223,223,223,223,223,223,224,0,0,0,0,
-0,0,0,0,0,0,0,222,223,223,223,223,223,223,223,223,223,223,223,223,223,223,224,0,0,0,0,
-0,0,0,0,0,0,0,222,223,223,223,223,223,223,223,223,223,223,223,223,223,223,224,0,0,0,0,
-0,0,0,0,0,0,0,222,223,223,223,223,223,223,223,223,223,223,223,223,223,223,224,0,0,0,0,
-0,0,0,0,0,0,0,225,226,226,226,226,226,226,226,226,226,226,226,226,226,226,227,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -260,7 +33,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer id="12" name="UI_menu_yellow_paper" width="27" height="20">
+ <layer id="6" name="ground" width="27" height="20" locked="1">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -268,12 +41,37 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,72,73,73,73,73,73,73,73,73,74,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,75,76,76,76,76,76,76,76,76,77,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,75,76,76,76,76,76,76,76,76,77,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,75,76,76,76,76,76,76,76,76,77,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,75,76,76,76,76,76,76,76,76,77,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,78,79,79,79,79,79,79,79,79,80,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,
+35,36,36,36,36,36,36,36,19,36,19,36,19,36,36,36,36,36,19,36,36,36,36,19,36,36,37
+</data>
+ </layer>
+ <objectgroup id="14" name="clouds" locked="1"/>
+ <layer id="10" name="palm_trees_and_grass" width="27" height="20" locked="1">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -284,34 +82,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer id="10" name="palm_trees_and_grass" width="27" height="20">
-  <data encoding="csv">
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,204,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,204,0,0,0,0,0,0,0,0,204,0,0,0,0,0,0,0,204,0,0,0,0,0,0,
-0,0,0,207,0,0,0,0,0,0,0,0,207,0,0,0,0,0,0,0,207,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-</data>
- </layer>
- <objectgroup id="7" name="text">
-  <object id="24" gid="213" x="91.6016" y="512.04" width="39" height="32"/>
-  <object id="25" gid="213" x="379.339" y="543.914" width="39" height="32"/>
-  <object id="26" gid="213" x="635.414" y="544.299" width="39" height="32"/>
+ <objectgroup id="7" name="text" locked="1">
   <object id="27" x="353.474" y="241.361" width="255.126" height="94.5633">
    <text fontfamily="Press Start 2P" wrap="1" kerning="0" halign="center" valign="center">Miguel's Pirate CV Game</text>
   </object>
@@ -319,4 +90,28 @@
    <text fontfamily="Press Start 2P" pixelsize="10" wrap="1" kerning="0" halign="center" valign="center">Press Enter to Play</text>
   </object>
  </objectgroup>
+ <layer id="16" name="background_palm_trees" width="27" height="20" locked="1">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,86,87,0,0,0,0,86,87,0,0,0,0,0,0,86,87,0,0,0,0,0,86,87,0,0,0,
+0,88,89,0,0,0,0,88,89,0,0,0,0,0,0,88,89,0,0,0,0,0,88,89,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
 </map>
