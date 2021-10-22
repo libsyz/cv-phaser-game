@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="27" height="20" tilewidth="32" tileheight="32" infinite="0" nextlayerid="18" nextobjectid="45">
+<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="27" height="20" tilewidth="32" tileheight="32" infinite="0" nextlayerid="20" nextobjectid="45">
+ <editorsettings>
+  <export target="welcome.json" format="json"/>
+ </editorsettings>
  <tileset firstgid="1" name="terrain" tilewidth="32" tileheight="32" tilecount="85" columns="17">
   <image source="palm-tree-island/Sprites/Terrain/Terrain(32x32).png" width="544" height="160"/>
  </tileset>
- <tileset firstgid="86" name="Back Palm Tree Regular 01" tilewidth="32" tileheight="32" tilecount="4" columns="2">
+ <tileset firstgid="86" name="background_palm_tree" tilewidth="32" tileheight="32" tilecount="4" columns="2">
   <image source="palm-tree-island/Sprites/Back Palm Trees/Back Palm Tree Regular 01.png" width="64" height="64"/>
  </tileset>
  <tileset firstgid="90" name="wood_board" tilewidth="32" tileheight="32" tilecount="16" columns="4">
   <image source="../wood_board.png" width="128" height="128"/>
  </tileset>
- <layer id="17" name="green_board" width="27" height="20">
+ <layer id="17" name="wood_board" width="27" height="20" locked="1">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -57,40 +60,7 @@
 35,36,36,36,36,36,36,36,19,36,19,36,19,36,36,36,36,36,19,36,36,36,36,19,36,36,37
 </data>
  </layer>
- <objectgroup id="14" name="clouds" locked="1"/>
- <layer id="10" name="palm_trees_and_grass" width="27" height="20" locked="1">
-  <data encoding="csv">
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-</data>
- </layer>
- <objectgroup id="7" name="text" locked="1">
-  <object id="27" x="353.474" y="241.361" width="255.126" height="94.5633">
-   <text fontfamily="Press Start 2P" wrap="1" kerning="0" halign="center" valign="center">Miguel's Pirate CV Game</text>
-  </object>
-  <object id="30" x="352.515" y="319.646" width="255.126" height="33.9474">
-   <text fontfamily="Press Start 2P" pixelsize="10" wrap="1" kerning="0" halign="center" valign="center">Press Enter to Play</text>
-  </object>
- </objectgroup>
- <layer id="16" name="background_palm_trees" width="27" height="20" locked="1">
+ <layer id="16" name="background_palm_trees" width="27" height="20">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,

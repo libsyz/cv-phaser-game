@@ -20,6 +20,11 @@ export class Welcome extends Phaser.Scene {
   create() {
     this.tilemap = this.make.tilemap({ key: 'welcome'});
 
+    this.bg = this.add.image(this.cameras.main.width / 2, this.cameras.main.height / 2, 'bg')
+    this.bg.displayWidth = this.sys.canvas.width
+    this.bg.displayHeight = this.sys.canvas.height
+
+
     this.groundTileset = this.tilemap.addTilesetImage('terrain', 'ground-tiles');
     this.palmTreesTileset = this.tilemap.addTilesetImage('background_palm_tree', 'bg-palm-trees')
     this.woodBoardTileset = this.tilemap.addTilesetImage('wood_board', 'wood-board')
@@ -27,13 +32,6 @@ export class Welcome extends Phaser.Scene {
     this.backgroundLayer = this.tilemap.createLayer('ground', this.groundTileset, 0, -30 );
     this.palmTressLayer = this.tilemap.createLayer('background_palm_trees', this.palmTreesTileset, 0, -30);
     this.woodBoardLayer = this.tilemap.createLayer('green_board', this.woodBoardTileset, 0, -30);
-
-
-
-    // this.bg = this.add.image(this.cameras.main.width / 2, this.cameras.main.height / 2, 'bg')
-    // this.bg.displayWidth = this.sys.canvas.width
-    // this.bg.displayHeight = this.sys.canvas.height
-
 
   }
 
