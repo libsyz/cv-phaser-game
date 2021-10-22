@@ -56,13 +56,22 @@ export class Welcome extends Phaser.Scene {
                     align: 'center',
                   });
 
-    this.subtitle = this.add.text(360 , 304, 'Press Start',
+    this.subtitle = this.add.text(360 , 294, 'Press Start',
                   {
                     fontFamily: 'PressStart',
                     color: '#000000',
                     align: 'center',
-                  });
+                  }).setInteractive();
 
+
+    this.subtitleAnim = this.tweens.add({
+        targets: this.subtitle,
+        alpha: 0,
+        ease: 'Power2',
+        duration: 900,
+        repeat: -1,
+        yoyo: true
+      })
 
 
   }
@@ -74,7 +83,7 @@ export class Welcome extends Phaser.Scene {
 
     this.bigClouds.tilePositionX += 0.25;
     this.mediumClouds.tilePositionX += 0.35;
-
+    this.subtitleAnim.play();
   }
 
   textConfig(color = '000') {
