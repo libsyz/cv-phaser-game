@@ -15,6 +15,10 @@ export class Welcome extends Phaser.Scene {
     this.load.image('wood-board', 'wood_board.png');
     this.load.image('yellow-paper', 'yellow_paper.png');
 
+    this.load.image('big-clouds', 'treasure-hunters/palm-tree-island/Sprites/Background/Big Clouds.png');
+    this.load.image('medium-clouds', 'medium_clouds.png');
+    this.load.image('small-cloud', 'treasure-hunters/palm-tree-island/Sprites/Background/Small Cloud 2.png');
+
     this.tilemap = this.load.tilemapTiledJSON('welcome', 'treasure-hunters/welcome.json');
     // this.palmTreesTileSet =
   }
@@ -36,10 +40,14 @@ export class Welcome extends Phaser.Scene {
     // Layers
     this.backgroundLayer = this.tilemap.createLayer('ground', this.groundTileset, 0, -30 );
     this.palmTressLayer = this.tilemap.createLayer('background_palm_trees', this.palmTreesTileset, 0, -30);
+
+    this.bigClouds = this.add.tileSprite(400, 355, 800, 100, 'big-clouds');
+    this.mediumClouds = this.add.tileSprite(400, 400, 800, 864, 'medium-clouds');
+
     this.woodBoardLayer = this.tilemap.createLayer('wood_board', this.woodBoardTileset, 0, -30);
     this.yellowPaperLayer = this.tilemap.createLayer('yellow_paper', this.yellowPaperTileset, 0, -30);
 
-    // Objects
+    // Clouds
     // Text
     this.title = this.add.text(360 , 234, 'Miguel\'s CV\nPirate Game',
                   {
@@ -55,7 +63,7 @@ export class Welcome extends Phaser.Scene {
                     align: 'center',
                   });
 
-    // This is starting to get hard to manage
+
 
   }
 
@@ -63,6 +71,10 @@ export class Welcome extends Phaser.Scene {
     if (this.keyQ.isDown) {
       this.scene.start('loading-scene');
     }
+
+    this.bigClouds.tilePositionX += 0.25;
+    this.mediumClouds.tilePositionX += 0.35;
+
   }
 
   textConfig(color = '000') {

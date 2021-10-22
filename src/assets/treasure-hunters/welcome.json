@@ -3,6 +3,137 @@
  "infinite":false,
  "layers":[
         {
+         "draworder":"topdown",
+         "id":22,
+         "name":"clouds",
+         "objects":[
+                {
+                 "gid":126,
+                 "height":101,
+                 "id":48,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":448,
+                 "x":0,
+                 "y":416
+                }, 
+                {
+                 "gid":126,
+                 "height":101,
+                 "id":49,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":448,
+                 "x":448,
+                 "y":416
+                }, 
+                {
+                 "gid":128,
+                 "height":35,
+                 "id":51,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":133,
+                 "x":0,
+                 "y":288
+                }, 
+                {
+                 "gid":128,
+                 "height":35,
+                 "id":52,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":133,
+                 "x":160,
+                 "y":256
+                }, 
+                {
+                 "gid":128,
+                 "height":35,
+                 "id":54,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":133,
+                 "x":480,
+                 "y":288
+                }, 
+                {
+                 "gid":128,
+                 "height":35,
+                 "id":55,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":133,
+                 "x":672,
+                 "y":256
+                }, 
+                {
+                 "gid":129,
+                 "height":24,
+                 "id":56,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":74,
+                 "x":64,
+                 "y":96
+                }, 
+                {
+                 "gid":129,
+                 "height":24,
+                 "id":57,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":74,
+                 "x":288,
+                 "y":128
+                }, 
+                {
+                 "gid":129,
+                 "height":24,
+                 "id":58,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":74,
+                 "x":576,
+                 "y":96
+                }, 
+                {
+                 "gid":129,
+                 "height":24,
+                 "id":59,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":74,
+                 "x":704,
+                 "y":128
+                }],
+         "opacity":1,
+         "type":"objectgroup",
+         "visible":true,
+         "x":0,
+         "y":0
+        }, 
+        {
          "data":[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 90, 98, 98, 98, 98, 98, 98, 98, 98, 98, 98, 98, 98, 99, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 100, 101, 101, 101, 101, 101, 101, 101, 101, 101, 101, 101, 101, 102, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 100, 101, 101, 101, 101, 101, 101, 101, 101, 101, 101, 101, 101, 102, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 100, 101, 101, 101, 101, 101, 101, 101, 101, 101, 101, 101, 101, 102, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 100, 101, 101, 101, 101, 101, 101, 101, 101, 101, 101, 101, 101, 102, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 100, 101, 101, 101, 101, 101, 101, 101, 101, 101, 101, 101, 101, 102, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 103, 104, 104, 104, 104, 104, 104, 104, 104, 104, 104, 104, 104, 105, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
          "height":20,
          "id":17,
@@ -49,72 +180,9 @@
          "width":27,
          "x":0,
          "y":0
-        }, 
-        {
-         "draworder":"topdown",
-         "id":21,
-         "name":"text",
-         "objects":[
-                {
-                 "height":50.84375,
-                 "id":45,
-                 "name":"",
-                 "rotation":0,
-                 "text":
-                    {
-                     "fontfamily":"Press Start 2P",
-                     "halign":"center",
-                     "text":"Miguel's CV Pirate Game",
-                     "valign":"center",
-                     "wrap":true
-                    },
-                 "type":"",
-                 "visible":true,
-                 "width":192,
-                 "x":320,
-                 "y":224
-                }, 
-                {
-                 "height":32,
-                 "id":47,
-                 "name":"",
-                 "rotation":0,
-                 "text":
-                    {
-                     "fontfamily":"Press Start 2P",
-                     "halign":"center",
-                     "pixelsize":14,
-                     "text":"Press Enter",
-                     "valign":"center",
-                     "wrap":true
-                    },
-                 "type":"",
-                 "visible":true,
-                 "width":192,
-                 "x":320,
-                 "y":288
-                }],
-         "offsetx":32,
-         "offsety":32,
-         "opacity":1,
-         "type":"objectgroup",
-         "visible":true,
-         "x":0,
-         "y":0
-        }, 
-        {
-         "draworder":"topdown",
-         "id":22,
-         "name":"clouds",
-         "objects":[],
-         "opacity":1,
-         "type":"objectgroup",
-         "visible":true,
-         "x":0,
-         "y":0
         }],
  "nextlayerid":23,
- "nextobjectid":48,
+ "nextobjectid":60,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.7.2",
@@ -171,6 +239,47 @@
          "tilecount":16,
          "tileheight":32,
          "tilewidth":32
+        }, 
+        {
+         "columns":0,
+         "firstgid":122,
+         "grid":
+            {
+             "height":1,
+             "orientation":"orthogonal",
+             "width":1
+            },
+         "margin":0,
+         "name":"clouds",
+         "spacing":0,
+         "tilecount":4,
+         "tileheight":101,
+         "tiles":[
+                {
+                 "id":4,
+                 "image":"palm-tree-island\/Sprites\/Background\/Big Clouds.png",
+                 "imageheight":101,
+                 "imagewidth":448
+                }, 
+                {
+                 "id":5,
+                 "image":"palm-tree-island\/Sprites\/Background\/Small Cloud 3.png",
+                 "imageheight":39,
+                 "imagewidth":140
+                }, 
+                {
+                 "id":6,
+                 "image":"palm-tree-island\/Sprites\/Background\/Small Cloud 2.png",
+                 "imageheight":35,
+                 "imagewidth":133
+                }, 
+                {
+                 "id":7,
+                 "image":"palm-tree-island\/Sprites\/Background\/Small Cloud 1.png",
+                 "imageheight":24,
+                 "imagewidth":74
+                }],
+         "tilewidth":448
         }],
  "tilewidth":32,
  "type":"map",
