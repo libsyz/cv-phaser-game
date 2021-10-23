@@ -64,7 +64,7 @@ export class Welcome extends Phaser.Scene {
                   }).setInteractive();
 
 
-    this.subtitleAnim = this.tweens.add({
+    this.subTitleAnimation = this.tweens.add({
         targets: this.subtitle,
         alpha: 0,
         ease: 'Power2',
@@ -83,7 +83,7 @@ export class Welcome extends Phaser.Scene {
 
     this.bigClouds.tilePositionX += 0.25;
     this.mediumClouds.tilePositionX += 0.35;
-    this.subtitleAnim.play();
+    this.subTitleAnimation.play();
   }
 
   textConfig(color = '000') {

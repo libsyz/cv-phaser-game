@@ -39,8 +39,19 @@
 
 ---------------------------------------------------
 
-[ ] - Render new tilemap intro scene
-[ ] - Make sure background is placed in the back
-[ ] - Optional: How can I get the objects in the scene?
+** Restimating my todos **
+
+[X] - Use Texture Packer to 
+  [X] - Create One For the background layer
+  [X] - Create One Texture for the ground
+  [X] - Create One Texture for the UI Layer
+
+[X] - Try to render all three layers on the game
 
 ----------------------------------------------------
+
+[X] - Add Layer for the yellow paper on top of the Green Board
+[X] - Add Cloud Objects
+
+[X] - Extra - Animate cloud objects to start moving! 
+[X] - Animate text! 
