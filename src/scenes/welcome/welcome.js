@@ -18,7 +18,12 @@ export class Welcome extends Phaser.Scene {
     this.load.image('big-clouds', 'treasure-hunters/palm-tree-island/Sprites/Background/Big Clouds.png');
     this.load.image('medium-clouds', 'medium_clouds.png');
     this.load.image('small-cloud', 'treasure-hunters/palm-tree-island/Sprites/Background/Small Cloud 2.png');
-    this.load.image('front-palm-trees', '/treasure-hunters/palm-tree-island/Sprites/Front Palm Trees/Front Palm Bottom and Grass (32x32).png')
+    this.load.image('front-palm-trees', 'treasure-hunters/palm-tree-island/Sprites/Front Palm Trees/Front Palm Bottom and Grass (32x32).png')
+    this.load.image('front-palm-trees-head', 'treasure-hunters/palm-tree-island/Sprites/Front Palm Trees/Front Palm Tree Top 01.png')
+
+    this.palmAnims = this.load.atlas('front-palm-trees-anims', 'palm_tree_heads.png' ,'palm_tree_heads.json');
+
+
     this.tilemap = this.load.tilemapTiledJSON('welcome', 'treasure-hunters/welcome.json');
     // this.palmTreesTileSet =
   }
@@ -48,7 +53,7 @@ export class Welcome extends Phaser.Scene {
     // this.yellowPaperLayer = this.tilemap.createLayer('yellow_paper', this.yellowPaperTileset, 0, -30);
     this.frontPalmTreesLayer = this.tilemap.createLayer('front_palm_trunks_roots', this.frontPalmTreesTileset, 0, -30);
 
-
+    this.palmTreeHeads = this.tilemap.createFromObjects('front_palm_tree_heads', { gid: 115,  key: 'front-palm-trees-head' })
     // Clouds
     // Text
     this.title = this.add.text(360 , 234, 'Miguel\'s CV\nPirate Game',
@@ -66,6 +71,8 @@ export class Welcome extends Phaser.Scene {
                   }).setInteractive();
 
 
+    this.loadPalmTreeAnims();
+
     this.subTitleAnimation = this.tweens.add({
         targets: this.subtitle,
         alpha: 0,
@@ -79,6 +86,7 @@ export class Welcome extends Phaser.Scene {
   }
 
   update() {
+
     if (this.keyQ.isDown) {
       this.scene.start('loading-scene');
     }
@@ -86,6 +94,10 @@ export class Welcome extends Phaser.Scene {
     this.bigClouds.tilePositionX += 0.25;
     this.mediumClouds.tilePositionX += 0.35;
     this.subTitleAnimation.play();
+
+    if (!this.anims.isPlaying) {
+      this.anims.play('palmsway');
+    }
   }
 
   textConfig(color = '000') {
@@ -95,4 +107,18 @@ export class Welcome extends Phaser.Scene {
     }
   }
 
+  loadPalmTreeAnims() {
+    // this.anims.create({})
+  this.anims.create({
+      key: 'palmsway',
+      frames: this.anims.gen  ('front-palm-trees-anims', {
+        prefix: 'palm-tree  -sway-',
+        start: 1,
+        end: 4
+      }),
+      frameRate: 4,
+      yoyo: true,
+      repeat: -1
+    })
+  }
 }

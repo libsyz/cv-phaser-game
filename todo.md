@@ -55,3 +55,16 @@
 
 [X] - Extra - Animate cloud objects to start moving! 
 [X] - Animate text! 
+
+
+------------------------------------------------------
+
+[X] - Add Layer for the front palm trees
+[X] - Add the palm tree heads
+[ ] - Animate the palm tree heads
+
+[ ] - Add the flag
+[ ] - Animate the flag
+
+[ ] - Add the coffin
+[ ] - Animate the coffin
