@@ -7,6 +7,7 @@ export class Welcome extends Phaser.Scene {
   }
 
   preload() {
+    this.keyA = this.input.keyboard.addKey('A');
     this.keyQ = this.input.keyboard.addKey('Q');
     this.load.baseURL = 'assets/';
     this.load.image('bg', 'treasure-hunters/palm-tree-island/Sprites/Background/BG Image.png');
@@ -72,7 +73,7 @@ export class Welcome extends Phaser.Scene {
 
 
     this.loadPalmTreeAnims();
-
+    this.palmTreeHeads.forEach((palmTree) => palmTree.play('palmsway'));
     this.subTitleAnimation = this.tweens.add({
         targets: this.subtitle,
         alpha: 0,
@@ -91,13 +92,11 @@ export class Welcome extends Phaser.Scene {
       this.scene.start('loading-scene');
     }
 
+
     this.bigClouds.tilePositionX += 0.25;
     this.mediumClouds.tilePositionX += 0.35;
     this.subTitleAnimation.play();
-
-    if (!this.anims.isPlaying) {
-      this.anims.play('palmsway');
-    }
+    console.log(this.palmTreeHeads[0]);
   }
 
   textConfig(color = '000') {
@@ -109,15 +108,14 @@ export class Welcome extends Phaser.Scene {
 
   loadPalmTreeAnims() {
     // this.anims.create({})
-  this.anims.create({
+  this.palmSway = this.anims.create({
       key: 'palmsway',
-      frames: this.anims.gen  ('front-palm-trees-anims', {
-        prefix: 'palm-tree  -sway-',
+      frames: this.anims.generateFrameNames('front-palm-trees-anims', {
+        prefix: 'palm-tree-sway0',
         start: 1,
         end: 4
       }),
       frameRate: 4,
-      yoyo: true,
       repeat: -1
     })
   }

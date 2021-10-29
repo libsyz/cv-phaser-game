@@ -41,7 +41,7 @@
 
 ** Restimating my todos **
 
-[X] - Use Texture Packer to 
+[X] - Use Texture Packer to
   [X] - Create One For the background layer
   [X] - Create One Texture for the ground
   [X] - Create One Texture for the UI Layer
@@ -53,15 +53,15 @@
 [X] - Add Layer for the yellow paper on top of the Green Board
 [X] - Add Cloud Objects
 
-[X] - Extra - Animate cloud objects to start moving! 
-[X] - Animate text! 
+[X] - Extra - Animate cloud objects to start moving!
+[X] - Animate text!
 
 
 ------------------------------------------------------
 
 [X] - Add Layer for the front palm trees
 [X] - Add the palm tree heads
-[ ] - Animate the palm tree heads
+[X] - Animate the palm tree heads
 
 [ ] - Add the flag
 [ ] - Animate the flag
