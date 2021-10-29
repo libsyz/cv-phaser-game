@@ -21,11 +21,14 @@ export class Welcome extends Phaser.Scene {
     this.load.image('small-cloud', 'treasure-hunters/palm-tree-island/Sprites/Background/Small Cloud 2.png');
     this.load.image('front-palm-trees', 'treasure-hunters/palm-tree-island/Sprites/Front Palm Trees/Front Palm Bottom and Grass (32x32).png')
     this.load.image('front-palm-trees-head', 'treasure-hunters/palm-tree-island/Sprites/Front Palm Trees/Front Palm Tree Top 01.png')
-
+    this.load.image('pirate-flag', 'treasure-hunters/palm-tree-island/Sprites/Objects/Flag/Flag 01.png' )
+    this.load.image('platform', 'treasure-hunters/palm-tree-island/Sprites/Objects/Flag/Platform.png' )
+    this.load.image('chest', 'treasure-hunters/palm-tree-island/Sprites/Objects/Chest/Chest Open 03.png'),
     this.palmAnims = this.load.atlas('front-palm-trees-anims', 'palm_tree_heads.png' ,'palm_tree_heads.json');
-
+    this.flagAnims = this.load.atlas('pirate-flag-anims', 'pirate_flag.png' ,'pirate_flag.json');
 
     this.tilemap = this.load.tilemapTiledJSON('welcome', 'treasure-hunters/welcome.json');
+
     // this.palmTreesTileSet =
   }
 
@@ -41,7 +44,7 @@ export class Welcome extends Phaser.Scene {
     this.groundTileset = this.tilemap.addTilesetImage('terrain', 'ground-tiles');
     this.palmTreesTileset = this.tilemap.addTilesetImage('background_palm_tree', 'bg-palm-trees')
     this.woodBoardTileset = this.tilemap.addTilesetImage('wood_board', 'wood-board')
-    // this.yellowPaperTileset = this.tilemap.addTilesetImage('yellow_paper', 'yellow-paper')
+    this.yellowPaperTileset = this.tilemap.addTilesetImage('yellow_paper', 'yellow-paper')
     this.frontPalmTreesTileset = this.tilemap.addTilesetImage('front_palm_grass', 'front-palm-trees' )
     // Layers
     this.backgroundLayer = this.tilemap.createLayer('ground', this.groundTileset, 0, -30 );
@@ -51,10 +54,16 @@ export class Welcome extends Phaser.Scene {
     this.mediumClouds = this.add.tileSprite(400, 400, 800, 864, 'medium-clouds');
 
     this.woodBoardLayer = this.tilemap.createLayer('wood_board', this.woodBoardTileset, 0, -30);
-    // this.yellowPaperLayer = this.tilemap.createLayer('yellow_paper', this.yellowPaperTileset, 0, -30);
+    this.yellowPaperLayer = this.tilemap.createLayer('yellow_paper', this.yellowPaperTileset, 0, -30);
     this.frontPalmTreesLayer = this.tilemap.createLayer('front_palm_trunks_roots', this.frontPalmTreesTileset, 0, -30);
 
-    this.palmTreeHeads = this.tilemap.createFromObjects('front_palm_tree_heads', { gid: 115,  key: 'front-palm-trees-head' })
+    this.palmTreeHeads = this.tilemap.createFromObjects('front_palm_tree_heads', { gid: 115,  key: 'front-palm-trees-head' });
+    [this.pirateFlag] = this.tilemap.createFromObjects('pirate_flag', { id: 49, key: 'pirate-flag'} );
+    [this.platForm] = this.tilemap.createFromObjects('pirate_flag', { id: 50, key: 'platform'  });
+    [this.chest] = this.tilemap.createFromObjects('pirate_flag', { id: 51, key: 'chest'  });
+    this.pirateFlag.y -= 30;
+    this.platForm.y -= 30;
+    this.chest.y -= 28;
     // Clouds
     // Text
     this.title = this.add.text(360 , 234, 'Miguel\'s CV\nPirate Game',
@@ -71,9 +80,14 @@ export class Welcome extends Phaser.Scene {
                     align: 'center',
                   }).setInteractive();
 
+    // palm tree animations
 
     this.loadPalmTreeAnims();
+    this.loadPirateFlagAnims();
+
     this.palmTreeHeads.forEach((palmTree) => palmTree.play('palmsway'));
+    this.pirateFlag.play('pirateflagsway');
+
     this.subTitleAnimation = this.tweens.add({
         targets: this.subtitle,
         alpha: 0,
@@ -82,6 +96,8 @@ export class Welcome extends Phaser.Scene {
         repeat: -1,
         yoyo: true
       })
+
+    // flag animation and object
 
 
   }
@@ -96,7 +112,6 @@ export class Welcome extends Phaser.Scene {
     this.bigClouds.tilePositionX += 0.25;
     this.mediumClouds.tilePositionX += 0.35;
     this.subTitleAnimation.play();
-    console.log(this.palmTreeHeads[0]);
   }
 
   textConfig(color = '000') {
@@ -114,6 +129,19 @@ export class Welcome extends Phaser.Scene {
         prefix: 'palm-tree-sway0',
         start: 1,
         end: 4
+      }),
+      frameRate: 4,
+      repeat: -1
+    })
+  }
+
+  loadPirateFlagAnims() {
+    this.anims.create({
+      key: 'pirateflagsway',
+      frames: this.anims.generateFrameNames('pirate-flag-anims', {
+        prefix: 'pirate-flag0',
+        start: 1,
+        end: 9
       }),
       frameRate: 4,
       repeat: -1
