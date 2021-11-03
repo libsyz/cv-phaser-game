@@ -1,5 +1,5 @@
 import { WelcomeBackground } from './classes/welcome_background.js';
-
+import { LayerFactory } from './classes/layer_factory.js';
 
 export class Welcome extends Phaser.Scene {
   constructor() {
@@ -12,7 +12,7 @@ export class Welcome extends Phaser.Scene {
     this.keyQ = this.input.keyboard.addKey('Q');
     this.load.baseURL = 'assets/';
     this.load.image('bg', 'treasure-hunters/palm-tree-island/Sprites/Background/BG Image.png');
-    this.load.image('ground-tiles', 'treasure-hunters/palm-tree-island/Sprites/Terrain/Terrain(32x32).png');
+    this.load.image('ground', 'treasure-hunters/palm-tree-island/Sprites/Terrain/Terrain(32x32).png');
     this.load.image('bg-palm-trees', 'treasure-hunters/palm-tree-island/Sprites/Back Palm Trees/Back Palm Tree Regular 01.png');
     this.load.image('wood-board', 'wood_board.png');
     this.load.image('yellow-paper', 'yellow_paper.png');
@@ -34,23 +34,29 @@ export class Welcome extends Phaser.Scene {
   }
 
   create() {
-    this.tilemap = this.make.tilemap({ key: 'welcome'});
 
-    this.bg = new WelcomeBackground(this, 'bg')
+    this.tilemap = this.make.tilemap({ key: 'welcome'});
+    this.layerFactory = new LayerFactory(this.tilemap);
+    console.log(this.layerFactory);
     //  Background layer
-    // this.bg = this.add.image(this.cameras.main.width / 2, this.cameras.main.height / 2, 'bg')
-    // this.bg.displayWidth = this.sys.canvas.width
-    // this.bg.displayHeight = this.sys.canvas.height
+    this.bg = new WelcomeBackground(this, 'bg')
 
     // Tilesets
-    this.groundTileset = this.tilemap.addTilesetImage('terrain', 'ground-tiles');
-    this.palmTreesTileset = this.tilemap.addTilesetImage('background_palm_tree', 'bg-palm-trees')
+
+    // The code I'd love to have
+    this.groundLayer = this.layerFactory.create('ground');
+    this.bgPalmTreesLayer = this.layerFactory.create('bg-palm-trees');
+
+    this.frontPalmTreesTileset = this.tilemap.addTilesetImage('front_palm_grass', 'front-palm-trees' )
+
+
+
+
     this.woodBoardTileset = this.tilemap.addTilesetImage('wood_board', 'wood-board')
     this.yellowPaperTileset = this.tilemap.addTilesetImage('yellow_paper', 'yellow-paper')
-    this.frontPalmTreesTileset = this.tilemap.addTilesetImage('front_palm_grass', 'front-palm-trees' )
     // Layers
-    this.backgroundLayer = this.tilemap.createLayer('ground', this.groundTileset, 0, -30 );
-    this.palmTressLayer = this.tilemap.createLayer('background_palm_trees', this.palmTreesTileset, 0, -30);
+
+
 
     this.bigClouds = this.add.tileSprite(400, 355, 800, 100, 'big-clouds');
     this.mediumClouds = this.add.tileSprite(400, 400, 800, 864, 'medium-clouds');
@@ -60,6 +66,7 @@ export class Welcome extends Phaser.Scene {
     this.frontPalmTreesLayer = this.tilemap.createLayer('front_palm_trunks_roots', this.frontPalmTreesTileset, 0, -30);
 
     this.palmTreeHeads = this.tilemap.createFromObjects('front_palm_tree_heads', { gid: 115,  key: 'front-palm-trees-head' });
+
     [this.pirateFlag] = this.tilemap.createFromObjects('pirate_flag', { id: 49, key: 'pirate-flag'} );
     [this.platForm] = this.tilemap.createFromObjects('pirate_flag', { id: 50, key: 'platform'  });
     [this.chest] = this.tilemap.createFromObjects('pirate_flag', { id: 51, key: 'chest'  });
