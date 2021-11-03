@@ -41,19 +41,16 @@ export class Welcome extends Phaser.Scene {
     //  Background layer
     this.bg = new WelcomeBackground(this, 'bg')
 
-    // Tilesets
-
-    // The code I'd love to have
+    // LayerFactory
+    // uses convention over conf to find image, tileset and layer names
     this.groundLayer = this.layerFactory.create('ground');
     this.bgPalmTreesLayer = this.layerFactory.create('bg-palm-trees');
+    this.frontPalmTreesLayer = this.layerFactory.create('front-palm-trees')
+    this.woodBoardLayer = this.layerFactory.create('wood-board')
+    this.yellowPaperLayer = this.layerFactory.create('yellow-paper')
 
-    this.frontPalmTreesTileset = this.tilemap.addTilesetImage('front_palm_grass', 'front-palm-trees' )
 
-
-
-
-    this.woodBoardTileset = this.tilemap.addTilesetImage('wood_board', 'wood-board')
-    this.yellowPaperTileset = this.tilemap.addTilesetImage('yellow_paper', 'yellow-paper')
+    // this.woodBoardTileset = this.tilemap.addTilesetImage('wood_board', 'wood-board')
     // Layers
 
 
@@ -61,9 +58,8 @@ export class Welcome extends Phaser.Scene {
     this.bigClouds = this.add.tileSprite(400, 355, 800, 100, 'big-clouds');
     this.mediumClouds = this.add.tileSprite(400, 400, 800, 864, 'medium-clouds');
 
-    this.woodBoardLayer = this.tilemap.createLayer('wood_board', this.woodBoardTileset, 0, -30);
-    this.yellowPaperLayer = this.tilemap.createLayer('yellow_paper', this.yellowPaperTileset, 0, -30);
-    this.frontPalmTreesLayer = this.tilemap.createLayer('front_palm_trunks_roots', this.frontPalmTreesTileset, 0, -30);
+    // this.woodBoardLayer = this.tilemap.createLayer('wood_board', this.woodBoardTileset, 0, -30);
+    // this.yellowPaperLayer = this.tilemap.createLayer('yellow_paper', this.yellowPaperTileset, 0, -30);
 
     this.palmTreeHeads = this.tilemap.createFromObjects('front_palm_tree_heads', { gid: 115,  key: 'front-palm-trees-head' });
 
