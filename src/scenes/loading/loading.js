@@ -41,6 +41,5 @@ export class LoadingScene extends Scene {
 
   update() {
     this.player.update();
-    this.physics.world.collide(this.player, this.merchantShip);
   }
 }

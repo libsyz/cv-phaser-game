@@ -1,3 +1,4 @@
+import { WelcomeBackground } from './classes/welcome_background.js';
 
 
 export class Welcome extends Phaser.Scene {
@@ -35,10 +36,11 @@ export class Welcome extends Phaser.Scene {
   create() {
     this.tilemap = this.make.tilemap({ key: 'welcome'});
 
+    this.bg = new WelcomeBackground(this, 'bg')
     //  Background layer
-    this.bg = this.add.image(this.cameras.main.width / 2, this.cameras.main.height / 2, 'bg')
-    this.bg.displayWidth = this.sys.canvas.width
-    this.bg.displayHeight = this.sys.canvas.height
+    // this.bg = this.add.image(this.cameras.main.width / 2, this.cameras.main.height / 2, 'bg')
+    // this.bg.displayWidth = this.sys.canvas.width
+    // this.bg.displayHeight = this.sys.canvas.height
 
     // Tilesets
     this.groundTileset = this.tilemap.addTilesetImage('terrain', 'ground-tiles');
