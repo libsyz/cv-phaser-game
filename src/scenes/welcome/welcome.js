@@ -1,6 +1,7 @@
 import { WelcomeBackground } from './classes/welcome_background.js';
 import { LayerFactory } from './classes/layer_factory.js';
 import { CloudFactory } from './classes/cloud_factory.js';
+import { PalmTreeHeadFactory } from './classes/palm_tree_head_factory';
 
 export class Welcome extends Phaser.Scene {
   constructor() {
@@ -35,15 +36,18 @@ export class Welcome extends Phaser.Scene {
   }
 
   create() {
-
+    // Sprite / Layer Factories
     const tilemap = this.make.tilemap({ key: 'welcome'});
     const layerFactory = new LayerFactory(tilemap);
     this.cloudFactory = new CloudFactory(this);
-    console.log(this.layerFactory);
-    //  Background layer
+
+    // Object Factories
+    const palmTreeHeadFactory = new PalmTreeHeadFactory(this, tilemap);
+
+    //  Background Image
     new WelcomeBackground(this, 'bg')
 
-    // LayerFactory
+    // LayerFactories
     // uses convention over conf to find image, tileset and layer names
     layerFactory.create('ground');
     layerFactory.create('bg-palm-trees');
@@ -53,41 +57,31 @@ export class Welcome extends Phaser.Scene {
 
     this.cloudFactory.getBigClouds();
     this.cloudFactory.getMediumClouds();
-    //
 
-    // this.woodBoardLayer = this.tilemap.createLayer('wood_board', this.woodBoardTileset, 0, -30);
-    // this.yellowPaperLayer = this.tilemap.createLayer('yellow_paper', this.yellowPaperTileset, 0, -30);
 
-    // this.palmTreeHeads = this.tilemap.createFromObjects('front_palm_tree_heads', { gid: 115,  key: 'front-palm-trees-head' });
+    // Objects
+    // PalmTrees
+    palmTreeHeadFactory.generate();
 
-    // [this.pirateFlag] = this.tilemap.createFromObjects('pirate_flag', { id: 49, key: 'pirate-flag'} );
-    // [this.platForm] = this.tilemap.createFromObjects('pirate_flag', { id: 50, key: 'platform'  });
-    // [this.chest] = this.tilemap.createFromObjects('pirate_flag', { id: 51, key: 'chest'  });
-    // this.pirateFlag.y -= 30;
-    // this.platForm.y -= 30;
-    // this.chest.y -= 28;
-    // Clouds
-    // Text
+    [this.pirateFlag] = tilemap.createFromObjects('pirate_flag', { id: 49, key: 'pirate-flag'} );
+    [this.platForm] = tilemap.createFromObjects('pirate_flag', { id: 50, key: 'platform'  });
+    [this.chest] = tilemap.createFromObjects('pirate_flag', { id: 51, key: 'chest'  });
+    this.pirateFlag.y -= 30;
+    this.platForm.y -= 30;
+    this.chest.y -= 28;
+
     this.title = this.add.text(360 , 234, 'Miguel\'s CV\nPirate Game',
-                  {
-                    fontFamily: 'PressStart',
-                    color: '#000000',
-                    align: 'center',
-                  });
+                  this.textConfig());
 
     this.subtitle = this.add.text(360 , 294, 'Press Start',
-                  {
-                    fontFamily: 'PressStart',
-                    color: '#000000',
-                    align: 'center',
-                  }).setInteractive();
+                  this.textConfig()).setInteractive();
 
     // palm tree animations
 
     // this.loadPalmTreeAnims();
     // this.loadPirateFlagAnims();
 
-    // this.palmTreeHeads.forEach((palmTree) => palmTree.play('palmsway'));
+    //
     // this.pirateFlag.play('pirateflagsway');
 
     this.subTitleAnimation = this.tweens.add({
@@ -114,26 +108,15 @@ export class Welcome extends Phaser.Scene {
     // this.subTitleAnimation.play();
   }
 
-  textConfig(color = '000') {
+  textConfig(color = '#000000') {
     return {
-      fontFamily: 'PressStart',
-      color: '000'
+              fontFamily: 'PressStart',
+              color: color,
+              align: 'center',
     }
   }
 
-  loadPalmTreeAnims() {
-    // this.anims.create({})
-  this.palmSway = this.anims.create({
-      key: 'palmsway',
-      frames: this.anims.generateFrameNames('front-palm-trees-anims', {
-        prefix: 'palm-tree-sway0',
-        start: 1,
-        end: 4
-      }),
-      frameRate: 4,
-      repeat: -1
-    })
-  }
+
 
   loadPirateFlagAnims() {
     this.anims.create({
