@@ -62,7 +62,7 @@ export class Welcome extends Phaser.Scene {
     // Objects
     // PalmTrees
     palmTreeHeadFactory.generate();
-
+    //
     [this.pirateFlag] = tilemap.createFromObjects('pirate_flag', { id: 49, key: 'pirate-flag'} );
     [this.platForm] = tilemap.createFromObjects('pirate_flag', { id: 50, key: 'platform'  });
     [this.chest] = tilemap.createFromObjects('pirate_flag', { id: 51, key: 'chest'  });
