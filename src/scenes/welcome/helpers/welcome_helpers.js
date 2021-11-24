@@ -8,4 +8,7 @@ export class WelcomeHelpers {
   write(text, color = this.color ) {
 
   }
+
+
+  
 }
